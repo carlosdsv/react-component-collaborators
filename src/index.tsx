@@ -1,10 +1,9 @@
-import * as React from 'react'
-import styles from './styles.module.css'
+import CollaboratorsList from "./CollaboratorsList/CollaboratorsList";
+import CardComplete from "./Cards/CardComplete";
+import CardMinimal from "./Cards/CardMinimal";
 
-interface Props {
-  text: string
-}
-
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component HOLA: {text}</div>
+export {
+  CollaboratorsList,
+  CardComplete,
+  CardMinimal
 }
