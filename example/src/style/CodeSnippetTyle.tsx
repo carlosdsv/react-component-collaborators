@@ -7,11 +7,11 @@ align-content: space-around;
 background-color: #FFF
 `
 export const SnippetDiv = styled.div`
-width: 50%;
+width: 55%;
 margin: 0px auto;
 `
 export const CodeDiv = styled.div`
-width: 50%;
+width: 55%;
 background-color: #000;
 border-radius: 4px;
 margin: 0px auto;

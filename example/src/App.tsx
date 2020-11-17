@@ -6,7 +6,6 @@ import {
   Button, 
   CardTypeButtonDiv, 
   CardTypeContainerDiv, 
-   
   P, 
   ComponentDisplayDiv, 
   CustomizationDiv, 
@@ -48,8 +47,6 @@ const App:React.FC = () => {
   });
 
   // Card state
-  
-  
   const [cardStyleObject, setCardStyleObject] = useState<cardStyleObjectI>({
     cardWidth: '300px', 
     cardHeight: '150px',
@@ -76,26 +73,23 @@ const App:React.FC = () => {
     image: 'mandatory url',
     title: 'mandatory title',
     description: 'optional description'
-  }, {}, ...]
+  }, {}, ...];
   `;
-
   const basicStructureSnippet:string = `
   <CollaboratorsList collaboratorsArray={collaboratorsArray} listStyleObject={listStyleObject}>
     ${cardComponent === 'complete'? '<CardComplete': '<CardMinimal'} cardStyleObject={cardStyleObject} imagePosition={imagePosition}/>
   </CollaboratorsList>
   `;
-
   const imagePositionSnippet:string = `
-  const imagePosition = '${imagePosition}'
+  const imagePosition = '${imagePosition}';
   `;
-
   const listStyleObjectSnippet:string = `
-  const listStyleObject = {{
+  const listStyleObject = {
     listWidth: '${listStyleObject.listWidth}',
     listHeight: '${listStyleObject.listHeight}', 
     direction: '${listStyleObject.direction}',
     listBackgroundColor: '${listStyleObject.listBackgroundColor}'
-  }
+  };
   `;
 
   const cardStyleObjectSnippet:string = `
@@ -125,7 +119,7 @@ const App:React.FC = () => {
     fontSizeDescription: '${cardStyleObject.fontSizeDescription}',
     paddingDescription: '${cardStyleObject.paddingDescription}',
     marginDescription: '${cardStyleObject.marginDescription}'
-  }
+  };
   `;
   
   // Type of card functions
@@ -439,6 +433,9 @@ const App:React.FC = () => {
             <Code>{basicStructureSnippet}</Code>
           </pre>
         </CodeDiv>
+        <SnippetDiv>
+          <p>I hope you find this component useful!</p>
+        </SnippetDiv>
       </CodeSnippetDiv>
     </AppDiv>
   )

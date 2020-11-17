@@ -18,7 +18,7 @@ const collaboratorsArray: collaborator[] = [
   },
   {
     image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80',
-    title: 'Tyriono Lannister',
+    title: 'Tyrion Lannister',
     description: 'Feels superior'
   },
   {
