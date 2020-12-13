@@ -1,4 +1,4 @@
-import { cardStyleObjectI } from '../interfaces';
+import { cardStyleObjectI } from '../interfaces'
 
 const cardStyleObject: cardStyleObjectI = {
   cardWidth: 300,
@@ -28,4 +28,4 @@ const cardStyleObject: cardStyleObjectI = {
   marginDescription: '0px'
 }
 
-export default cardStyleObject;
+export default cardStyleObject

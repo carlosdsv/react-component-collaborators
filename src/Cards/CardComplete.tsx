@@ -1,69 +1,80 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { cardStyleObjectI, collaborator } from '../interfaces';
-import {ContainerDivStyle, 
-  TextDivStyle, 
+import * as React from 'react'
+import styled from 'styled-components'
+import { cardStyleObjectI, collaborator } from '../interfaces'
+import {
+  ContainerDivStyle,
+  TextDivStyle,
   TitlePStyle,
   DescriptionPStyle,
   ImgDivStyle,
-  ImgStyle} from '../StyleComponents/CardsStyle';
+  ImgStyle
+} from '../StyleComponents/CardsStyle'
 
 export interface ICardCompleteProps {
-  collaboratorObj?: collaborator,
-  cardStyleObject: cardStyleObjectI,
-  imagePosition: string,
+  collaboratorObj?: collaborator
+  cardStyleObject: cardStyleObjectI
+  imagePosition: string
 }
 
-const CardComplete:React.FC<ICardCompleteProps> = ({collaboratorObj = {}, cardStyleObject, imagePosition}) => {
-
+const CardComplete: React.FC<ICardCompleteProps> = ({
+  collaboratorObj = {},
+  cardStyleObject,
+  imagePosition
+}) => {
   const ContainerDiv = styled.div`
     ${ContainerDivStyle(
-      cardStyleObject.cardWidth, 
-      cardStyleObject.cardHeight, 
-      cardStyleObject.borderCard, 
-      cardStyleObject.cardBackgroundColor, 
-      imagePosition)}
+      cardStyleObject.cardWidth,
+      cardStyleObject.cardHeight,
+      cardStyleObject.borderCard,
+      cardStyleObject.cardBackgroundColor,
+      imagePosition
+    )}
   `
   const TextDiv = styled.div`
     ${TextDivStyle()}
   `
   const TitleP = styled.p`
     ${TitlePStyle(
-      cardStyleObject.textAlign, 
+      cardStyleObject.textAlign,
       cardStyleObject.titleColor,
       cardStyleObject.fontSizeTitle,
       cardStyleObject.paddingTitle,
-      cardStyleObject.marginTitle)}
+      cardStyleObject.marginTitle
+    )}
   `
   const DescriptionP = styled.p`
     ${DescriptionPStyle(
-      cardStyleObject.textAlign, 
+      cardStyleObject.textAlign,
       cardStyleObject.descriptionColor,
       cardStyleObject.fontSizeDescription,
       cardStyleObject.paddingDescription,
-      cardStyleObject.marginDescription)}
+      cardStyleObject.marginDescription
+    )}
   `
   const ImgDiv = styled.div`
-  ${ImgDivStyle(imagePosition)}
+    ${ImgDivStyle(imagePosition)}
   `
   const Img = styled.img`
-  ${ImgStyle(
-    cardStyleObject.imageFormat, 
-    cardStyleObject.borderImage, 
-    cardStyleObject.imageWidth, 
-    cardStyleObject.imageHeight)}
+    ${ImgStyle(
+      cardStyleObject.imageFormat,
+      cardStyleObject.borderImage,
+      cardStyleObject.imageWidth,
+      cardStyleObject.imageHeight
+    )}
   `
   return (
     <ContainerDiv>
       <ImgDiv>
-        <Img src={collaboratorObj.image} alt=''/>
+        <Img src={collaboratorObj.image} alt='' />
       </ImgDiv>
       <TextDiv>
         <TitleP>{collaboratorObj.title}</TitleP>
-        {collaboratorObj.description? <DescriptionP>{collaboratorObj.description}</DescriptionP> : null}
-      </TextDiv>    
+        {collaboratorObj.description ? (
+          <DescriptionP>{collaboratorObj.description}</DescriptionP>
+        ) : null}
+      </TextDiv>
     </ContainerDiv>
-  );
+  )
 }
 
-export default CardComplete;
+export default CardComplete
