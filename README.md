@@ -4,7 +4,11 @@
 
 [![NPM](https://img.shields.io/npm/v/react-component-collaborators.svg)](https://www.npmjs.com/package/react-component-collaborators) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-You can check the Demo for easier implementation.
+Open source project that I created as NPM package to practice React framework and TypeScript.
+
+Is a highly customizable React component that display images with information that could be used to show clients in homepage or employees/team members.
+
+You can check the [Demo](https://carlosdsv.github.io/react-component-collaborators/) for easier implementation.
 
 ## Install
 
