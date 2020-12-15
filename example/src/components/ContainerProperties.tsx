@@ -11,7 +11,7 @@ import {
   ColorTextInput,
   ComponentDiv
 } from '../style/ComponentContainerStyle'
-import { Button, FlexRowDiv, P, TitleP } from '../style/TypeCardStyle'
+import { Button, FlexRowDiv, TitleP } from '../style/TypeCardStyle'
 
 interface IContainerPropertiesProps {
   setListStyleObject: Dispatch<SetStateAction<listStyleObjectI>>
@@ -45,12 +45,12 @@ const ContainerProperties: React.FC<IContainerPropertiesProps> = ({
     <ComponentDiv>
       <TitleP>Properties for the container:</TitleP>
       <FlexRowDiv>
-        <P>Width </P>
+        <p>Width </p>
         <CardSizeInput
           placeholder={listStyleObject.listWidth}
           onChange={handleListWidth}
         />
-        <P>Height</P>
+        <p>Height</p>
         <CardSizeInput
           type='text'
           placeholder={listStyleObject.listHeight}
@@ -58,7 +58,7 @@ const ContainerProperties: React.FC<IContainerPropertiesProps> = ({
         />
       </FlexRowDiv>
       <div>
-        <P>Display direction</P>
+        <p>Display direction</p>
         <Button type='button' value='vertical' onClick={handleDirection}>
           Vertical
         </Button>
@@ -70,7 +70,7 @@ const ContainerProperties: React.FC<IContainerPropertiesProps> = ({
         </Button>
       </div>
       <div>
-        <P>Background color:</P>
+        <p>Background color:</p>
         <div>
           <ColorTextInput
             type='text'

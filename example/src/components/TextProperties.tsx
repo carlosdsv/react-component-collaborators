@@ -7,13 +7,7 @@ import React, {
 import { cardStyleObjectI } from '../interfaces'
 import { CardDiv, Hr, LongInput } from '../style/CardStyle'
 import { ColorInput, ColorTextInput } from '../style/ComponentContainerStyle'
-import {
-  Button,
-  FlexRowDiv,
-  P,
-  SizeInput,
-  TitleP
-} from '../style/TypeCardStyle'
+import { Button, FlexRowDiv, SizeInput, TitleP } from '../style/TypeCardStyle'
 
 interface ITextPropertiesProps {
   setCardStyleObject: Dispatch<SetStateAction<cardStyleObjectI>>
@@ -86,7 +80,7 @@ const TextProperties: React.FC<ITextPropertiesProps> = ({
     <CardDiv>
       <TitleP>Properties for the text:</TitleP>
       <FlexRowDiv>
-        <P>Align</P>
+        <p>Align</p>
         <Button type='button' value='left' onClick={handleTextAlign}>
           Left
         </Button>
@@ -101,7 +95,7 @@ const TextProperties: React.FC<ITextPropertiesProps> = ({
       <div>
         <TitleP>Title:</TitleP>
         <FlexRowDiv>
-          <P>Color:</P>
+          <p>Color:</p>
           <div>
             <ColorTextInput
               type='text'
@@ -115,7 +109,7 @@ const TextProperties: React.FC<ITextPropertiesProps> = ({
             />
           </div>
           <FlexRowDiv>
-            <P>Font size</P>
+            <p style={{ marginLeft: '0.5rem' }}>Font size</p>
             <SizeInput
               type='text'
               placeholder={cardStyleObject.fontSizeTitle}
@@ -126,7 +120,7 @@ const TextProperties: React.FC<ITextPropertiesProps> = ({
       </div>
 
       <div>
-        <P>Padding</P>
+        <p>Padding</p>
         <LongInput
           type='text'
           placeholder={cardStyleObject.marginTitle}
@@ -134,7 +128,7 @@ const TextProperties: React.FC<ITextPropertiesProps> = ({
         />
       </div>
       <div>
-        <P>Margin</P>
+        <p>Margin</p>
         <LongInput
           type='text'
           placeholder={cardStyleObject.paddingTitle}
@@ -147,7 +141,7 @@ const TextProperties: React.FC<ITextPropertiesProps> = ({
           <Hr />
           <TitleP>Description:</TitleP>
           <FlexRowDiv>
-            <P>Color</P>
+            <p>Color</p>
             <div>
               <ColorTextInput
                 type='text'
@@ -160,20 +154,20 @@ const TextProperties: React.FC<ITextPropertiesProps> = ({
                 onChange={handleDescriptionColor}
               />
             </div>
-            <P>Font size</P>
+            <p style={{ marginLeft: '0.5rem' }}>Font size</p>
             <SizeInput
               type='text'
               placeholder={cardStyleObject.fontSizeDescription}
               onChange={handleFontSizeDescription}
             />
           </FlexRowDiv>
-          <P>Padding</P>
+          <p>Padding</p>
           <LongInput
             type='text'
             placeholder={cardStyleObject.marginDescription}
             onChange={handleMarginDescription}
           />
-          <P>Margin</P>
+          <p>Margin</p>
           <LongInput
             type='text'
             placeholder={cardStyleObject.paddingDescription}

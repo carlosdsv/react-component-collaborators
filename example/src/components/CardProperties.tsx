@@ -7,13 +7,7 @@ import React, {
 import { borderI, cardStyleObjectI } from '../interfaces'
 import { CardDiv, CardSizeInput, Hr } from '../style/CardStyle'
 import { ColorInput, ColorTextInput } from '../style/ComponentContainerStyle'
-import {
-  Button,
-  FlexRowDiv,
-  P,
-  SizeInput,
-  TitleP
-} from '../style/TypeCardStyle'
+import { Button, FlexRowDiv, SizeInput, TitleP } from '../style/TypeCardStyle'
 interface ICardPropertiesProps {
   cardStyleObject: cardStyleObjectI
   setCardStyleObject: Dispatch<SetStateAction<cardStyleObjectI>>
@@ -89,13 +83,13 @@ const CardProperties: React.FC<ICardPropertiesProps> = ({
       <TitleP>Properties for the card:</TitleP>
       <div>
         <FlexRowDiv>
-          <P>Width</P>
+          <p>Width</p>
           <CardSizeInput
             type='text'
             placeholder={cardStyleObject.cardWidth}
             onChange={handleCardWidth}
           />
-          <P>Height</P>
+          <p>Height</p>
           <CardSizeInput
             type='text'
             placeholder={cardStyleObject.cardHeight}
@@ -103,7 +97,7 @@ const CardProperties: React.FC<ICardPropertiesProps> = ({
           />
         </FlexRowDiv>
         <FlexRowDiv>
-          <P>Background color:</P>
+          <p>Background color:</p>
           <div>
             <ColorTextInput
               type='text'
@@ -117,15 +111,15 @@ const CardProperties: React.FC<ICardPropertiesProps> = ({
             />
           </div>
         </FlexRowDiv>
-        <P>Card border:</P>
+        <p>Card border:</p>
         <FlexRowDiv>
-          <P>Width</P>
+          <p>Width</p>
           <SizeInput
             type='text'
             placeholder={cardStyleObject.borderCard.width}
             onChange={handleBorderCardWidth}
           />
-          <P>Color</P>
+          <p style={{ marginLeft: '0.5rem' }}>Color</p>
           <div>
             <ColorTextInput
               type='text'
@@ -140,7 +134,7 @@ const CardProperties: React.FC<ICardPropertiesProps> = ({
           </div>
         </FlexRowDiv>
         <FlexRowDiv>
-          <P>Style</P>
+          <p>Style</p>
           <Button type='button' value='none' onClick={handleBorderCardStyle}>
             None
           </Button>
@@ -159,7 +153,7 @@ const CardProperties: React.FC<ICardPropertiesProps> = ({
       <TitleP>Properties for the image:</TitleP>
       <div>
         <FlexRowDiv>
-          <P>Format:</P>
+          <p>Format:</p>
           <Button type='button' value='circle' onClick={handleImageFormat}>
             circle
           </Button>
@@ -168,28 +162,28 @@ const CardProperties: React.FC<ICardPropertiesProps> = ({
           </Button>
         </FlexRowDiv>
         <FlexRowDiv>
-          <P>Width</P>
+          <p>Width</p>
           <CardSizeInput
             type='text'
             placeholder={cardStyleObject.imageWidth}
             onChange={handleImageWidth}
           />
-          <P>Height</P>
+          <p>Height</p>
           <CardSizeInput
             type='text'
             placeholder={cardStyleObject.imageHeight}
             onChange={handleImageHeight}
           />
         </FlexRowDiv>
-        <P>Border</P>
+        <p>Border</p>
         <FlexRowDiv>
-          <P>Width</P>
+          <p>Width</p>
           <SizeInput
             type='text'
             placeholder={cardStyleObject.borderImage.width}
             onChange={handleBorderImageWidth}
           />
-          <P>Color</P>
+          <p style={{ marginLeft: '0.5rem' }}>Color</p>
           <div>
             <ColorTextInput
               type='text'
@@ -204,7 +198,7 @@ const CardProperties: React.FC<ICardPropertiesProps> = ({
           </div>
         </FlexRowDiv>
         <FlexRowDiv>
-          <P>Style</P>
+          <p>Style</p>
           <Button type='button' value='none' onClick={handleBorderImageStyle}>
             None
           </Button>

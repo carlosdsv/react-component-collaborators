@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 
-export const CodeSnippetDiv = styled.p`
+export const CodeSnippet = styled.p`
+  width: 100vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-content: space-around;
   background-color: #fff;
 `
-export const SnippetDiv = styled.div`
-  width: 55%;
-  margin: 0px auto;
+export const Snippet = styled.div`
+  width: 55vw;
+  height: 100%;
+  margin: 1rem auto;
 `
 export const CodeDiv = styled.div`
   width: 55%;

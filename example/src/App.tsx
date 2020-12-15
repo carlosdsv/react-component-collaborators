@@ -12,12 +12,7 @@ import {
 } from './style/TypeCardStyle'
 import collaboratorsArray from './mock/collaboratorsArray'
 import { cardStyleObjectI, listStyleObjectI } from './interfaces'
-import {
-  Code,
-  CodeDiv,
-  CodeSnippetDiv,
-  SnippetDiv
-} from './style/CodeSnippetTyle'
+import { Code, CodeDiv, CodeSnippet, Snippet } from './style/CodeSnippetTyle'
 import TypeOfCard from './components/TypeOfCard'
 import ContainerProperties from './components/ContainerProperties'
 import CardProperties from './components/CardProperties'
@@ -76,10 +71,14 @@ const App: React.FC = () => {
   }, {}, ...];
   `
   const basicStructureSnippet: string = `
-  <CollaboratorsList collaboratorsArray={collaboratorsArray} listStyleObject={listStyleObject}>
-    ${
-      cardComponent === 'complete' ? '<CardComplete' : '<CardMinimal'
-    } cardStyleObject={cardStyleObject} imagePosition={imagePosition}/>
+  <CollaboratorsList 
+    collaboratorsArray={collaboratorsArray} 
+    listStyleObject={listStyleObject}
+  >
+    ${cardComponent === 'complete' ? '<CardComplete' : '<CardMinimal'} 
+    cardStyleObject={cardStyleObject} 
+    imagePosition={imagePosition}
+    />
   </CollaboratorsList>
   `
   const imagePositionSnippet: string = `
@@ -176,24 +175,24 @@ const App: React.FC = () => {
           cardComponent={cardComponent}
         />
       </CustomizationDiv>
-      <CodeSnippetDiv>
-        <SnippetDiv>
+      <CodeSnippet>
+        <Snippet>
           <p>
             In order for this component to work, your collaborators array should
             look like this:
           </p>
-        </SnippetDiv>
+        </Snippet>
         <CodeDiv>
           <pre>
             <Code>{collaborarorsArraySnippet}</Code>
           </pre>
         </CodeDiv>
-        <SnippetDiv>
+        <Snippet>
           <p>
             Once you are happy with the result, just copy and paste the
             following variables with the styles:
           </p>
-        </SnippetDiv>
+        </Snippet>
         <CodeDiv>
           <pre>
             <Code>{imagePositionSnippet}</Code>
@@ -205,18 +204,18 @@ const App: React.FC = () => {
             <Code>{cardStyleObjectSnippet}</Code>
           </pre>
         </CodeDiv>
-        <SnippetDiv>
+        <Snippet>
           <p>Finally your component should look like this:</p>
-        </SnippetDiv>
+        </Snippet>
         <CodeDiv>
-          <pre>
+          <pre style={{ wordWrap: 'break-word' }}>
             <Code>{basicStructureSnippet}</Code>
           </pre>
         </CodeDiv>
-        <SnippetDiv>
+        <Snippet>
           <p>I hope you find this component useful!</p>
-        </SnippetDiv>
-      </CodeSnippetDiv>
+        </Snippet>
+      </CodeSnippet>
     </AppDiv>
   )
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ComponentDiv = styled.div`
   width: 20%;
-  height: 300px;
+  height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@ export const ComponentColorDiv = styled.div`
 export const ColorTextInput = styled.input`
   width: 80px;
   height: 25px;
-  box-sizing: border-box;
+  margin-left: 0.5rem;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
   background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
   background-color: #ffffff;

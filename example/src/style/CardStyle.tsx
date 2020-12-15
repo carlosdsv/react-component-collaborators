@@ -14,8 +14,7 @@ export const CardDiv = styled.div`
 export const CardSizeInput = styled.input`
   height: 25px;
   width: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0.5rem 0.5rem;
   box-sizing: border-box;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
   background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);

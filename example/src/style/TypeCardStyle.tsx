@@ -1,26 +1,38 @@
 import styled from 'styled-components'
 
 export const AppDiv = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
   background-color: #ecf0f5;
+  p {
+    color: #000;
+    margin: 0.5rem 0rem;
+  }
 `
 export const AppTitleDiv = styled.div`
-  text-align: center;
-`
-export const ComponentDisplayDiv = styled.div`
+  width: 100vw;
+  height: 3rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+`
+export const ComponentDisplayDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 export const CustomizationDiv = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 20px;
+  margin: 20px 0px;
 `
 export const CardTypeDiv = styled.div`
   width: 20%;
@@ -38,9 +50,6 @@ export const CardTypeContainerDiv = styled.div`
   display: flex;
   flex-direction: column;
 `
-export const P = styled.p`
-  color: #000;
-`
 export const TitleP = styled.p`
   color: #000;
   font-weight: bolder;
@@ -48,14 +57,14 @@ export const TitleP = styled.p`
 export const CardTypeButtonDiv = styled.p`
   display: flex;
   flex-direction: row;
-  margin: 0px;
 `
 export const Button = styled.button`
   height: 25px;
   width: 80px;
   align-text: center;
-  margin-left: 5px;
-  margin-top: 5px;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
   background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
   background-color: #ffffff;
@@ -71,7 +80,6 @@ export const SizeInput = styled.input`
   height: 25px;
   width: 50px;
   margin-left: 10px;
-  box-sizing: border-box;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
   background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
   background-color: #ffffff;
@@ -87,4 +95,5 @@ export const FlexRowDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 `
